@@ -143,7 +143,7 @@ export function BookmarkItem(props) {
 					<form onSubmit={onClickUpdate}>
 						<div class="md:flex md:items-center mb-4 px-4">
 							<label
-								class="md:w-1/6 block font-semibold text-sm dark:text-gray-500 mb-1 md:mb-0 pr-4 text-right sm:mr-8"
+								class="md:w-1/6 block font-semibold text-sm dark:text-gray-500 mb-1 md:mb-0 pr-4 md:text-right md:mr-8"
 								for="text"
 							>
 								Text *
@@ -161,7 +161,7 @@ export function BookmarkItem(props) {
 						</div>
 						<div class="md:flex md:items-center mb-4 px-4">
 							<label
-								class="md:w-1/6 block font-semibold text-sm dark:text-gray-500 mb-1 md:mb-0 pr-4 text-right sm:mr-8"
+								class="md:w-1/6 block font-semibold text-sm dark:text-gray-500 mb-1 md:mb-0 pr-4 md:text-right md:mr-8"
 								for="url"
 							>
 								Url *
