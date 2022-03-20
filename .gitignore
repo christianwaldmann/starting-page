@@ -40,3 +40,5 @@ yarn-error.log*
 /backend/ENV/
 /backend/env.bak/
 /backend/venv.bak/
+
+.history

@@ -54,15 +54,15 @@ export class Programming extends Component {
 					}
 				/>
 				<div
-					class="flex flex-grow"
+					class="flex flex-grow flex-col sm:flex-row"
 					style={{ height: "calc(100vh - 10000px)" }}
 				>
-					<div class="bg-gray-100 dark:bg-gray-900 h-full w-1/3 border-r dark:border-gray-700">
-						<div class="ml-auto md:w-56 pt-10">
+					<div class="bg-gray-100 dark:bg-gray-900 sm:h-full h-auto sm:w-1/3 border-r dark:border-gray-700 w-full">
+						<div class="ml-auto md:w-56 sm:pt-10">
 							<Navbar activeitem={"programming"} />
 						</div>
 					</div>
-					<div class="flex p-2">
+					<div class="flex p-2 w-full sm:w-auto">
 						{this.props.search_value !== "" ? (
 							[
 								// Search view
@@ -106,7 +106,7 @@ export class Programming extends Component {
 							]
 						) : (
 							// Default view
-							<div class="scrollbox overflow-y-scroll">
+							<div class="scrollbox overflow-y-scroll w-full sm:w-auto">
 								<div
 									class="scrollbox-content"
 									style={{

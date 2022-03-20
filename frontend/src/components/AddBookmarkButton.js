@@ -39,7 +39,7 @@ export function AddBookmarkButton(props) {
 
 	return (
 		<div>
-			<div class="w-64 flex">
+			<div class="sm:w-64 w-full flex">
 				<button
 					class="flex-grow m-2 px-4 py-3 outline-none rounded text-sm border border-gray-400 shadow-sm
 					focus:outline-none focus:border-blue-400 hover:border-blue-400 focus:text-blue-500 hover:text-blue-500
@@ -81,7 +81,7 @@ export function AddBookmarkButton(props) {
 					}}
 					contentLabel="Add Bookmark Modal"
 				>
-					<div class="w-104 sm:w-144 bg-white dark:bg-gray-850 -p-px">
+					<div class="w-104 sm:w-144 bg-white dark:bg-gray-850 sm:px-0 px-6">
 						<div class="flex items-center mb-4 px-4 pt-4">
 							<h2 class="text-gray-900 dark:text-gray-300 font-bold text-lg">
 								Bookmark

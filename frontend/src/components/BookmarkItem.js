@@ -17,10 +17,8 @@ export function BookmarkItem(props) {
 		setIsOpen(false);
 	}
 
-	const [
-		deleteConfirmationModalIsOpen,
-		deleteConfirmationModalSetIsOpen,
-	] = React.useState(false);
+	const [deleteConfirmationModalIsOpen, deleteConfirmationModalSetIsOpen] =
+		React.useState(false);
 
 	function openDeleteConfirmationModal() {
 		deleteConfirmationModalSetIsOpen(true);
@@ -61,7 +59,7 @@ export function BookmarkItem(props) {
 	}
 
 	return (
-		<div class="w-64">
+		<div class="sm:w-64 w-full">
 			<div class="m-2">
 				<ContextMenuTrigger id={props.id}>
 					<a
@@ -120,7 +118,7 @@ export function BookmarkItem(props) {
 				}}
 				contentLabel="Edit Bookmark Modal"
 			>
-				<div class="w-104 sm:w-144 bg-white dark:bg-gray-850">
+				<div class="w-104 sm:w-144 bg-white dark:bg-gray-850 sm:px-0 px-6">
 					<div class="flex items-center mb-4 px-4 pt-4">
 						<h2 class="text-gray-900 dark:text-gray-300 font-bold text-xl">
 							Bookmark
