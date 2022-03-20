@@ -21,7 +21,7 @@ export default function HeaderDropdownMenu(props) {
 		<div class="relative w-full">
 			<div class="flex justify-end mr-4">
 				<button
-					class="relative z-10 block text-gray-700 hover:text-black dark:text-gray-300 dark-hover:text-white focus:outline-none"
+					class="relative block text-gray-700 hover:text-black dark:text-gray-300 dark-hover:text-white focus:outline-none"
 					onClick={toggleDropdown}
 				>
 					<svg

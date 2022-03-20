@@ -16,7 +16,7 @@ export default function NavbarMobile(props) {
 					Category:
 				</span>
 				<button
-					class="font-semibold hover:bg-gray-300 dark-hover:bg-gray-800 text-xl text-gray-800 dark:text-gray-300 outline-none flex items-center flex-grow py-3 px-4"
+					class="font-semibold hover:bg-gray-300 dark-hover:bg-gray-800 text-xl text-gray-800 dark:text-gray-300 outline-none flex items-center flex-grow py-3 px-4 focus:outline-none"
 					onClick={toggleDropdown}
 				>
 					<span class="capitalize">{props.activeitem}</span>
@@ -44,7 +44,7 @@ export default function NavbarMobile(props) {
 						tabIndex="-1"
 					>
 						{props.activeitem === "home" ? (
-							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b border-l border-t dark:border-gray-700">
+							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b sm:border-l border-t dark:border-gray-700">
 								Home
 							</div>
 						) : (
@@ -59,7 +59,7 @@ export default function NavbarMobile(props) {
 						tabIndex="-1"
 					>
 						{props.activeitem === "personal" ? (
-							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b border-l border-t dark:border-gray-700">
+							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b sm:border-l border-t dark:border-gray-700">
 								Personal
 							</div>
 						) : (
@@ -74,7 +74,7 @@ export default function NavbarMobile(props) {
 						tabIndex="-1"
 					>
 						{props.activeitem === "career" ? (
-							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b border-l border-t dark:border-gray-700">
+							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b sm:border-l border-t dark:border-gray-700">
 								Career
 							</div>
 						) : (
@@ -89,7 +89,7 @@ export default function NavbarMobile(props) {
 						tabIndex="-1"
 					>
 						{props.activeitem === "programming" ? (
-							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b border-l border-t dark:border-gray-700">
+							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b sm:border-l border-t dark:border-gray-700">
 								Programming
 							</div>
 						) : (
@@ -104,7 +104,7 @@ export default function NavbarMobile(props) {
 						tabIndex="-1"
 					>
 						{props.activeitem === "gaming" ? (
-							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b border-l border-t dark:border-gray-700">
+							<div class="bg-white dark:bg-gray-850 text-blue-500 py-2 px-4 border-b sm:border-l border-t dark:border-gray-700">
 								Gaming
 							</div>
 						) : (

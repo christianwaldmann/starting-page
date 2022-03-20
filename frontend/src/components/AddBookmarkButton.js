@@ -137,7 +137,7 @@ export function AddBookmarkButton(props) {
 									required
 								/>
 							</div>
-							<div class="md:flex md:items-center p-4 bg-gray-300 dark:bg-gray-900">
+							<div class="md:flex md:items-center py-4 px-10 sm:px-4 bg-gray-300 dark:bg-gray-900 -mx-6 sm:mx-0">
 								<button
 									class="w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition duration-150 ease-in-out"
 									type="submit"

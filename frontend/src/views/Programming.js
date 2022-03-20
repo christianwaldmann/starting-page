@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import BookmarkContainer from "../components/BookmarkContainer";
 import Searchbar from "../components/Searchbar";
 import {
@@ -36,10 +36,11 @@ export class Programming extends Component {
 		);
 
 		// 2. Sort properties by predefined order
-		let bookmarks_split_by_category_obj_sorted = sortObjectPropertiesByPredefinedOrder(
-			bookmarks_split_by_category_obj,
-			["programming", "home", "personal", "career", "gaming"]
-		);
+		let bookmarks_split_by_category_obj_sorted =
+			sortObjectPropertiesByPredefinedOrder(
+				bookmarks_split_by_category_obj,
+				["programming", "home", "personal", "career", "gaming"]
+			);
 
 		// 3. Transform object with properties to array with subarrays
 		let bookmarks_split_by_category_arr_sorted = Object.entries(

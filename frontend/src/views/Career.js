@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import BookmarkContainer from "../components/BookmarkContainer";
 import Searchbar from "../components/Searchbar";
 import {

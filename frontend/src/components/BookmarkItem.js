@@ -176,7 +176,7 @@ export function BookmarkItem(props) {
 								defaultValue={props.href}
 							/>
 						</div>
-						<div class="md:flex md:items-center p-4 bg-gray-300 dark:bg-gray-900">
+						<div class="md:flex md:items-center py-4 px-10 sm:px-4 bg-gray-300 dark:bg-gray-900 -mx-6 sm:mx-0">
 							<button
 								class="w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition duration-150 ease-in-out"
 								type="submit"
@@ -209,7 +209,7 @@ export function BookmarkItem(props) {
 				}}
 				contentLabel="Delete Confirmation Modal"
 			>
-				<div class="w-104 sm:w-144 bg-white dark:bg-gray-850">
+				<div class="w-104 sm:w-144 bg-white dark:bg-gray-850 px-6 sm:px-0">
 					<div class=" px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
 						<div class="sm:flex sm:items-start">
 							<div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-gray-300 dark:bg-gray-750 sm:mx-0 sm:h-10 sm:w-10">
