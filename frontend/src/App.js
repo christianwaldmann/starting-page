@@ -20,6 +20,7 @@ import { loadUser } from "./actions/auth";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import Landing from "./views/Landing";
 
 class App extends Component {
 	componentDidMount() {
@@ -34,15 +35,12 @@ class App extends Component {
 						<div style={{ height: "100vh" }}>
 							<Helmet>
 								<title>Bookmarks</title>
-								<body
-									style="overflow: hidden; margin-right: calc(-1 * (100vw - 100%));"
-									class="bg-white dark:bg-gray-850"
-								></body>
+								<body class="bg-white dark:bg-gray-850"></body>
 							</Helmet>
 							<Switch>
 								<PrivateRoute
 									exact
-									path={["/", "/home"]}
+									path={["/home", ""]}
 									component={Home}
 								/>
 								<PrivateRoute
