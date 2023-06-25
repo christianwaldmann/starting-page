@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / '..' / '..' / 'database' / 'db.sqlite3',
+        'NAME': BASE_DIR / 'database' / 'db.sqlite3',
     }
 }
 
@@ -134,12 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '../../static')
 CORS_ALLOW_CREDENTIALS = True
 
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:1337',
-    'http://localhost:1338',
-    'https://bookmarks.christianwaldmann.com',
-    'https://bookmarks-staging.christianwaldmann.com',
-]
+CORS_ORIGIN_WHITELIST = ['http://frontend.localhost']
 
 
 REST_FRAMEWORK = {
