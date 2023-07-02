@@ -7,10 +7,13 @@ services:
         command:
             - "--providers.docker=true"
             - "--providers.docker.exposedbydefault=false"
-            - "--entrypoints.web.address=:80"
+            # - "--entrypoints.web.address=:80"
             - "--entrypoints.websecure.address=:443"
             - "--log.level=DEBUG" # DEBUG, PANIC, FATAL, ERROR, WARN, INFO
-            - "--log.filePath=/logs/traefik.log" 
+            - "--log.filePath=/logs/traefik.log"
+            - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+            # - "--certificatesresolvers.myresolver.acme.email=test@example.com"
+            - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
         ports:
             - "80:80"
             - "443:443"
@@ -26,7 +29,8 @@ services:
         labels:
             - "traefik.enable=true"
             - "traefik.http.routers.frontend.rule=Host(`${FRONTEND_DOMAIN}`)"
-            - "traefik.http.routers.frontend.entrypoints=web"
+            - "traefik.http.routers.frontend.entrypoints=websecure"
+            - "traefik.http.routers.whoami.tls.certresolver=myresolver"
 
     backend:
         image: starting-page-backend
@@ -38,4 +42,5 @@ services:
         labels:
             - "traefik.enable=true"
             - "traefik.http.routers.backend.rule=Host(`${BACKEND_DOMAIN}`)"
-            - "traefik.http.routers.backend.entrypoints=web"
+            - "traefik.http.routers.backend.entrypoints=websecure"
+            - "traefik.http.routers.whoami.tls.certresolver=myresolver"
