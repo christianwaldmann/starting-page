@@ -31,7 +31,7 @@ services:
             - "traefik.enable=true"
             - "traefik.http.routers.frontend.rule=Host(`${FRONTEND_DOMAIN}`)"
             - "traefik.http.routers.frontend.entrypoints=websecure"
-            - "traefik.http.routers.whoami.tls.certresolver=myresolver"
+            - "traefik.http.routers.frontend.tls.certresolver=myresolver"
 
     backend:
         image: starting-page-backend
@@ -44,4 +44,4 @@ services:
             - "traefik.enable=true"
             - "traefik.http.routers.backend.rule=Host(`${BACKEND_DOMAIN}`)"
             - "traefik.http.routers.backend.entrypoints=websecure"
-            - "traefik.http.routers.whoami.tls.certresolver=myresolver"
+            - "traefik.http.routers.backend.tls.certresolver=myresolver"
