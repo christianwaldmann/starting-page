@@ -16,7 +16,10 @@ export BACKEND_DOMAIN=$BACKEND_DOMAIN
 # set backend api url in frontend
 grep -qxF "REACT_APP_BACKEND_BASE_URL=$HTTP://$BACKEND_DOMAIN"/api ./frontend/.env || echo "REACT_APP_BACKEND_BASE_URL=$HTTP://$BACKEND_DOMAIN"/api >> ./frontend/.env
 
-# add frontend to CORS origin whitelist in backend
+# add backend domain to allowed hosts
+sed -i "s/ALLOWED_HOSTS = \[.*\]/ALLOWED_HOSTS = ['$BACKEND_DOMAIN']/" ./backend/api/settings.py
+
+# add frontend domain to CORS origin whitelist in backend
 sed -i "s/CORS_ORIGIN_WHITELIST = \[.*\]/CORS_ORIGIN_WHITELIST = ['$HTTP:\/\/$FRONTEND_DOMAIN']/" ./backend/api/settings.py
 
 # build images
