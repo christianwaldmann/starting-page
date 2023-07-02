@@ -24,4 +24,4 @@ docker build -t starting-page-frontend ./frontend
 docker build -t starting-page-backend ./backend
 
 # start application
-docker compose up # -d
+docker compose up -d
