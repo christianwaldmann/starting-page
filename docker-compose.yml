@@ -7,7 +7,7 @@ services:
         command:
             - "--providers.docker=true"
             - "--providers.docker.exposedbydefault=false"
-            # - "--entrypoints.web.address=:80"
+            - "--entrypoints.web.address=:80"
             - "--entrypoints.websecure.address=:443"
             - "--log.level=DEBUG" # DEBUG, PANIC, FATAL, ERROR, WARN, INFO
             - "--log.filePath=/logs/traefik.log"
